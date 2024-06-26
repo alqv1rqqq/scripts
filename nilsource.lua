@@ -1,5 +1,5 @@
 -- Updated frame:new function
-function frame:new(name)
+function frame.new(name)
     local ScreenGui = Instance.new("ScreenGui")
     local Frame = Instance.new("Frame")
     local UICorner = Instance.new("UICorner")
@@ -114,7 +114,7 @@ function frame:new(name)
 end
 
 -- Updated tab:new function
-function tab:new(name, parent)
+function tab.new(name, parent)
     local test = Instance.new("Frame")
     local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
     local test_2 = Instance.new("TextButton")
