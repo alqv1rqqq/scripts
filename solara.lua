@@ -1,4 +1,4 @@
-function sol.protect_gui(gui)
+local function sol.protect_gui(gui)
     if typeof(gui) == "Instance" then
         if gui:IsA("Frame") then
             local screenGui = gui.Parent
@@ -49,7 +49,7 @@ function sol.protect_gui(gui)
     end
 end
 
-function sol.unprotect_gui(gui)
+local function sol.unprotect_gui(gui)
     if typeof(gui) == "Instance" then
         local protected = gui:FindFirstChild("sol_protected")
         if protected then
