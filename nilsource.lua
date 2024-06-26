@@ -1,5 +1,4 @@
 function frame:new(name)
-
 	local ScreenGui = Instance.new("ScreenGui")
 	local Frame = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
@@ -25,7 +24,6 @@ function frame:new(name)
 	ScreenGui.Name = name
 
 	Frame.Parent = ScreenGui
-	Frame.Active = true
 	Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 	Frame.BackgroundColor3 = Color3.new(0.0352941, 0.0352941, 0.0352941)
 	Frame.BorderColor3 = Color3.new(0, 0, 0)
@@ -112,6 +110,7 @@ function frame:new(name)
 	UIAspectRatioConstraint_6.Parent = tabs
 	UIAspectRatioConstraint_6.AspectRatio = 0.3160000145435333
 
+	return Frame
 end
 
 function tab:new(name, parent)
@@ -328,4 +327,5 @@ function tab:new(name, parent)
 	UIAspectRatioConstraint_11.Parent = test_3
 	UIAspectRatioConstraint_11.AspectRatio = 1.5099999904632568
 
+        return Frame
 end
