@@ -1,14 +1,20 @@
-local function protect(gui)
+local function protect_gui(gui)
     if typeof(gui) == "Instance" then
-        if gui:IsA("Frame") then
+        if gui:IsA("ScreenGui") then
             local screenGui = gui.Parent
             if not screenGui or not screenGui:IsA("ScreenGui") then
                 screenGui = Instance.new("ScreenGui")
                 screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
             end
-            
+
             local isDragging = false
             local dragStartPos = nil
+
+            local function updateDrag(input)
+                if isDragging then
+                    gui.Position = UDim2.new(0, input.Position.X - dragStartPos.X, 0, input.Position.Y - dragStartPos.Y)
+                end
+            end
 
             gui.InputBegan:Connect(function(input)
                 if input.UserInputType == Enum.UserInputType.MouseButton1 then
@@ -26,35 +32,26 @@ local function protect(gui)
             end)
 
             gui.InputChanged:Connect(function(input)
-                if input.UserInputType == Enum.UserInputType.MouseMovement and isDragging then
-                    gui.Position = UDim2.new(0, input.Position.X - dragStartPos.X, 0, input.Position.Y - dragStartPos.Y)
+                if input.UserInputType == Enum.UserInputType.MouseMovement then
+                    updateDrag(input)
                 end
             end)
 
-            local protected = Instance.new("StringValue")
+            local protected = Instance.new("BoolValue")
             protected.Name = "sol_protected"
+            protected.Value = true
             protected.Parent = gui
-
-            local originalName = gui.Name
-            local nameChangeCoroutine = coroutine.create(function()
-                while protected.Parent == gui do
-                    gui.Name = tostring(math.random(10^10, 10^11 - 1))
-                    wait(0.01)
-                end
-            end)
-            coroutine.resume(nameChangeCoroutine)
         else
-            error("sol.protect_gui: Expected gui to be a Frame instance.")
+            error("sol.protect_gui: Expected gui to be a ScreenGui instance.")
         end
     end
 end
 
-local function unprotect(gui)
+local function unprotect_gui(gui)
     if typeof(gui) == "Instance" then
         local protected = gui:FindFirstChild("sol_protected")
-        if protected then
+        if protected and protected:IsA("BoolValue") and protected.Value then
             protected:Destroy()
-            gui.Name = gui.Name
             gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
         else
             error("Gui is not protected.")
