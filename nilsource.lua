@@ -1,3 +1,4 @@
+-- Updated frame:new function
 function frame:new(name)
     local ScreenGui = Instance.new("ScreenGui")
     local Frame = Instance.new("Frame")
@@ -112,6 +113,7 @@ function frame:new(name)
     return Frame
 end
 
+-- Updated tab:new function
 function tab:new(name, parent)
     local test = Instance.new("Frame")
     local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
@@ -159,11 +161,11 @@ function tab:new(name, parent)
         local children = parent:GetChildren()
         for _, child in ipairs(children) do
             if child:IsA("Frame") then
-                child.Visible = true
+                child.Visible = false
             end
         end
 
-	test.Visible = not test.Visible		
+        test.Visible = true
     end)
 
     return test
