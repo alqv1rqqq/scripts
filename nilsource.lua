@@ -154,7 +154,7 @@ function frame.tab:new(name, parent)
     UIAspectRatioConstraint.AspectRatio = 1.5099999904632568
 
     test_2.Name = name
-    test_2.Parent = parent.tabs
+    test_2.Parent = parent.Frame
     test_2.BackgroundColor3 = Color3.new(0.0156863, 0.0156863, 0.0156863)
     test_2.BorderColor3 = Color3.new(0, 0, 0)
     test_2.BorderSizePixel = 0
