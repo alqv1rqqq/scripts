@@ -118,7 +118,7 @@ end
 function frame.tab:new(name, parent)
     local test = Instance.new("Frame")
     local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-    local test_2 = Instance.new("TextButton")
+    local test2 = Instance.new("TextButton")
     local UICorner = Instance.new("UICorner")
     local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
     local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
@@ -160,7 +160,7 @@ function frame.tab:new(name, parent)
 
     test_2.MouseButton1Click:Connect(function()
         local children = parent:GetChildren()
-        for _, child in ipairs(children) do
+        for , child in ipairs(children) do
             if child:IsA("Frame") then
                 child.Visible = false
             end
@@ -168,7 +168,6 @@ function frame.tab:new(name, parent)
 
         test.Visible = true
     end)
-
-    return test
 end
+return test
 return frame
