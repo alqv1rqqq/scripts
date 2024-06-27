@@ -142,7 +142,7 @@ function frame.tab:new(name, parent)
     local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
 
     test.Name = name
-    test.Parent = parent.Frame
+    test.Parent = parent
     test.BackgroundColor3 = Color3.new(1, 1, 1)
     test.BackgroundTransparency = 1
     test.BorderColor3 = Color3.new(0, 0, 0)
@@ -154,7 +154,7 @@ function frame.tab:new(name, parent)
     UIAspectRatioConstraint.AspectRatio = 1.5099999904632568
 
     test_2.Name = name
-    test_2.Parent = parent
+    test_2.Parent = parent.Frame
     test_2.BackgroundColor3 = Color3.new(0.0156863, 0.0156863, 0.0156863)
     test_2.BorderColor3 = Color3.new(0, 0, 0)
     test_2.BorderSizePixel = 0
