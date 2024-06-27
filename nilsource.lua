@@ -118,7 +118,7 @@ end
 function frame.tab:new(name, parent)
     local test = Instance.new("Frame")
     local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-    local test2 = Instance.new("TextButton")
+    local test_2 = Instance.new("TextButton")
     local UICorner = Instance.new("UICorner")
     local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
     local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
