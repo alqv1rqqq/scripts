@@ -4,114 +4,132 @@ frame.tab={}
 frame.frame={}
 
 function frame.frame:new(name) 
-    local ScreenGui = Instance.new("ScreenGui")
-    local Frame = Instance.new("Frame")
-    local UICorner = Instance.new("UICorner")
-    local ImageLabel = Instance.new("ImageLabel")
-    local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-    local X = Instance.new("TextButton")
-    local UICorner_2 = Instance.new("UICorner")
-    local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-    local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
-    local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
-    local tabs = Instance.new("Frame")
-    local UICorner_3 = Instance.new("UICorner")
-    local Frame_2 = Instance.new("Frame")
-    local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
-    local Frame_3 = Instance.new("Frame")
-    local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
-    local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Frame_2 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local X = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local TextButton = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
 
-    ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-    ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    ScreenGui.Name = name
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-    Frame.Parent = ScreenGui
-    Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-    Frame.BackgroundColor3 = Color3.new(0.0352941, 0.0352941, 0.0352941)
-    Frame.BorderColor3 = Color3.new(0, 0, 0)
-    Frame.BorderSizePixel = 0
-    Frame.Position = UDim2.new(0.49795261, 0, 0.5, 0)
-    Frame.Size = UDim2.new(0.539721549, 0, 0.545905709, 0)
-    Frame.Active = true
-    Frame.Draggable = true
+Frame.Parent = ScreenGui
+Frame.Active = true
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.new(0.0352941, 0.0352941, 0.0352941)
+Frame.BorderColor3 = Color3.new(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.49795261, 0, 0.5, 0)
+Frame.Size = UDim2.new(0.539721549, 0, 0.545905709, 0)
+Frame.Draggable = true
+UICorner.Parent = Frame
+UICorner.CornerRadius = UDim.new(0.0500000007, 0)
 
-    UICorner.Parent = Frame
-    UICorner.CornerRadius = UDim.new(0.0500000007, 0)
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.ClipsDescendants = true
+ImageLabel.Position = UDim2.new(0, 0, -0.057644099, 0)
+ImageLabel.Size = UDim2.new(0.192716241, 0, 0.281818181, 0)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=17837598083"
+UIAspectRatioConstraint.Parent = ImageLabel
+UIAspectRatioConstraint.AspectRatio = 1.0240000486373901
 
-    ImageLabel.Parent = Frame
-    ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-    ImageLabel.BackgroundTransparency = 1
-    ImageLabel.BorderColor3 = Color3.new(0, 0, 0)
-    ImageLabel.BorderSizePixel = 0
-    ImageLabel.ClipsDescendants = true
-    ImageLabel.Position = UDim2.new(0, 0, -0.057644099, 0)
-    ImageLabel.Size = UDim2.new(0.192716241, 0, 0.281818181, 0)
-    ImageLabel.Image = "http://www.roblox.com/asset/?id=17837598083"
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.new(0.0156863, 0.0156863, 0.0156863)
+Frame_2.BorderColor3 = Color3.new(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 0, 0.173758209, 0)
+Frame_2.Size = UDim2.new(0.174506828, 0, 0.827272713, 0)
+UICorner_2.Parent = Frame_2
+UICorner_2.CornerRadius = UDim.new(0.200000003, 0)
+UIAspectRatioConstraint_2.Parent = Frame_2
+UIAspectRatioConstraint_2.AspectRatio = 0.3160000145435333
 
-    UIAspectRatioConstraint.Parent = ImageLabel
-    UIAspectRatioConstraint.AspectRatio = 1.0240000486373901
+X.Name = "X"
+X.Parent = Frame
+X.BackgroundColor3 = Color3.new(0.0156863, 0.0156863, 0.0156863)
+X.BackgroundTransparency = 1
+X.BorderColor3 = Color3.new(0, 0, 0)
+X.BorderSizePixel = 0
+X.Position = UDim2.new(0.926622391, 0, -0.00020668724, 0)
+X.Size = UDim2.new(0.0728376359, 0, 0.0886363611, 0)
+X.Font = Enum.Font.Nunito
+X.Text = "x"
+X.TextColor3 = Color3.new(1, 1, 1)
+X.TextScaled = true
+X.TextSize = 50
+X.TextWrapped = true
 
-    X.Name = "X"
-    X.Parent = Frame
-    X.BackgroundColor3 = Color3.new(0.0156863, 0.0156863, 0.0156863)
-    X.BackgroundTransparency = 1
-    X.BorderColor3 = Color3.new(0, 0, 0)
-    X.BorderSizePixel = 0
-    X.Position = UDim2.new(0.926622391, 0, -0.00020668724, 0)
-    X.Size = UDim2.new(0.0728376359, 0, 0.0886363611, 0)
-    X.Font = Enum.Font.Nunito
-    X.Text = "x"
-    X.TextColor3 = Color3.new(1, 1, 1)
-    X.TextScaled = true
-    X.TextSize = 50
-    X.TextWrapped = true
+UICorner_3.Parent = X
+UICorner_3.CornerRadius = UDim.new(0.5, 0)
+UITextSizeConstraint.Parent = X
+UITextSizeConstraint.MaxTextSize = 50
+UIAspectRatioConstraint_3.Parent = X
+UIAspectRatioConstraint_3.AspectRatio = 1.2309999465942383
+UIAspectRatioConstraint_4.Parent = Frame
+UIAspectRatioConstraint_4.AspectRatio = 1.4980000257492065
+TextButton.Parent = ScreenGui
+TextButton.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton.BackgroundColor3 = Color3.new(0.0156863, 0.0156863, 0.0156863)
+TextButton.BorderColor3 = Color3.new(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton.Size = UDim2.new(0.0819000825, 0, 0.124069482, 0)
+TextButton.Visible = false
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = ""
+TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14
+TextButton.TextWrapped = true
+TextButton.Draggable = true
 
-    UICorner_2.Parent = X
-    UICorner_2.CornerRadius = UDim.new(0.5, 0)
+UICorner_4.Parent = TextButton
+UICorner_4.CornerRadius = UDim.new(1, 0)
 
-    UITextSizeConstraint.Parent = X
-    UITextSizeConstraint.MaxTextSize = 50
+ImageLabel_2.Parent = TextButton
+ImageLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel_2.BackgroundTransparency = 1
+ImageLabel_2.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.ClipsDescendants = true
+ImageLabel_2.Position = UDim2.new(0, 0, -0.00764404284, 0)
+ImageLabel_2.Size = UDim2.new(1, 0, 1, 0)
+ImageLabel_2.Image = "http://www.roblox.com/asset/?id=17837598083"
 
-    UIAspectRatioConstraint_2.Parent = X
-    UIAspectRatioConstraint_2.AspectRatio = 1.2309999465942383
+UIAspectRatioConstraint_5.Parent = ImageLabel_2
 
-    UIAspectRatioConstraint_3.Parent = Frame
-    UIAspectRatioConstraint_3.AspectRatio = 1.4980000257492065
+UITextSizeConstraint_2.Parent = TextButton
+UITextSizeConstraint_2.MaxTextSize = 14
 
-    tabs.Name = "tabs"
-    tabs.Parent = Frame
-    tabs.BackgroundColor3 = Color3.new(0.0156863, 0.0156863, 0.0156863)
-    tabs.BorderColor3 = Color3.new(0, 0, 0)
-    tabs.BorderSizePixel = 0
-    tabs.Position = UDim2.new(0, 0, 0.173758209, 0)
-    tabs.Size = UDim2.new(0.174506828, 0, 0.827272713, 0)
+UIAspectRatioConstraint_6.Parent = TextButton
 
-    UICorner_3.Parent = tabs
-    UICorner_3.CornerRadius = UDim.new(0.200000003, 0)
+TextButton.MouseButton1Down:Connect(function()
+	Frame.Visible = true
+	TextButton.Visible = false
+end)
 
-    Frame_2.Parent = tabs
-    Frame_2.BackgroundColor3 = Color3.new(0.0156863, 0.0156863, 0.0156863)
-    Frame_2.BorderColor3 = Color3.new(0, 0, 0)
-    Frame_2.BorderSizePixel = 0
-    Frame_2.Position = UDim2.new(0.657657504, 0, -0.00206597289, 0)
-    Frame_2.Size = UDim2.new(0.339130431, 0, 1, 0)
-
-    UIAspectRatioConstraint_4.Parent = Frame_2
-    UIAspectRatioConstraint_4.AspectRatio = 0.10700000077486038
-
-    Frame_3.Parent = tabs
-    Frame_3.BackgroundColor3 = Color3.new(0.0156863, 0.0156863, 0.0156863)
-    Frame_3.BorderColor3 = Color3.new(0, 0, 0)
-    Frame_3.BorderSizePixel = 0
-    Frame_3.Position = UDim2.new(0, 0, -0.00206597289, 0)
-    Frame_3.Size = UDim2.new(1, 0, 0.0604395606, 0)
-
-    UIAspectRatioConstraint_5.Parent = Frame_3
-    UIAspectRatioConstraint_5.AspectRatio = 5.2270002365112305
-
-    UIAspectRatioConstraint_6.Parent = tabs
-    UIAspectRatioConstraint_6.AspectRatio = 0.3160000145435333
+X.MouseButton1Down:Connect(function()
+	Frame.Visible = false
+	TextButton.Visible = true
+end)
 return ScreenGui
 end
 
