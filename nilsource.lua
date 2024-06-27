@@ -160,7 +160,7 @@ function frame.tab:new(name, parent)
 
     test_2.MouseButton1Click:Connect(function()
         local children = parent:GetChildren()
-        for , child in ipairs(children) do
+        for secment, child in ipairs(children) do
             if child:IsA("Frame") then
                 child.Visible = false
             end
