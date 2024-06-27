@@ -1,4 +1,5 @@
--- Updated frame:new function
+local frame = {}
+
 function frame.new(name)
     local ScreenGui = Instance.new("ScreenGui")
     local Frame = Instance.new("Frame")
@@ -18,7 +19,6 @@ function frame.new(name)
     local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
     local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
 
-    -- Properties
     ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
     ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     ScreenGui.Name = name
@@ -110,10 +110,8 @@ function frame.new(name)
     UIAspectRatioConstraint_6.Parent = tabs
     UIAspectRatioConstraint_6.AspectRatio = 0.3160000145435333
 
-    return Frame
 end
 
--- Updated tab:new function
 function tab.new(name, parent)
     local test = Instance.new("Frame")
     local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
@@ -170,3 +168,4 @@ function tab.new(name, parent)
 
     return test
 end
+return frame
