@@ -112,7 +112,7 @@ function frame.frame:new(name)
 
     UIAspectRatioConstraint_6.Parent = tabs
     UIAspectRatioConstraint_6.AspectRatio = 0.3160000145435333
-
+return ScreenGui
 end
 
 function frame.tab:new(name, parent)
@@ -168,6 +168,6 @@ function frame.tab:new(name, parent)
 
         test.Visible = true
     end)
-    return test
+return test
 end
 return frame
