@@ -168,5 +168,6 @@ function frame.tab:new(name, parent)
 
         test.Visible = true
     end)
+    return test
 end
 return frame
